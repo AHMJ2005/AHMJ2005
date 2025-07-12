@@ -67,7 +67,7 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
 ## 🌐 Connect With Me
 
 <p align="center">
-  <a href="abojyefl@gmail.com" target="_blank">
+  <a href="mailto:your.abojyefl@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://linkedin.com/in/ahmadabujwefell" target="_blank">
