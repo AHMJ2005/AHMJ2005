@@ -55,14 +55,6 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
 </p>
 
 ---
-
-## 📫 Contact Me
-
-- 📧 Email: abojyefl@gmail.com 
-- 💼 LinkedIn: [linkedin.com/in/yourusername](https://linkedin.com/in/ahmadabujwefell)  
-- 💬 Telegram: [@yourusername](https://t.me/AHMAJ_05)
-
----
 ---
 
 ## 🌐 Connect With Me
@@ -86,6 +78,17 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
   <a href="https://notion.so/yourusername" target="_blank">
     <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
   </a>
+  <a href="https://twitter.com/yourusername" target="_blank">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  <a href="https://instagram.com/yourusername" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+  <a href="https://youtube.com/@yourusername" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+  </a>
 </p>
+
+
 
 _⭐ Don't forget to give this profile a follow if you like cool tech content!_
