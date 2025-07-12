@@ -67,20 +67,27 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
 ## 🌐 Connect With Me
 
 <p align="center">
-   <a href="mailto:abojyefl@gamail.com" target="_blank">
+  <a href="mailto:abojyefl@gamail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
+  &nbsp;
   <a href="https://linkedin.com/in/ahmadabujwefell" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
+  &nbsp;
   <a href="https://t.me/AHMAJ_05" target="_blank">
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
+  &nbsp;
   <a href="https://notion.so/AHMJ" target="_blank">
     <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
   </a>
+  &nbsp;
   <a href="https://instagram.com/a7mad_riyad" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-bad
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a>
+</p>
+
 
 
 
