@@ -1,6 +1,7 @@
-<h1 align="center">👨‍💻 About Me/h1>
+<h1 align="center">Hi 👋, I'm Ahmad</h1>
 
-  
+## 👨‍💻 About Me
+
 🚀 Currently Working On:  
 Enhancing my web development skills by learning HTML, CSS, and JavaScript, while also building AI and mobile applications.
 
