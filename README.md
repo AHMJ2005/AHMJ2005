@@ -55,7 +55,7 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" height="30" alt="notion logo"  />
 </div>
-
+---
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
   <br />
