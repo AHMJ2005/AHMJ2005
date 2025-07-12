@@ -78,7 +78,7 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
 <p align="left">
   <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
   <br />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=python&layout=compact&theme=tokyonight" alt="python" />
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
 </p>
 
 ---
