@@ -79,6 +79,8 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
   <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
   <br />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight" alt="Top Languages" />
+<p align="center">My main language: <b>Python</b></p>
+
 </p>
 
 ---
