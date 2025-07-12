@@ -59,7 +59,7 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
 ## 📫 Contact Me
 
 - 📧 Email: your.email@example.com  
-- 💼 LinkedIn: [linkedin.com/in/yourusername](https://linkedin.com/in/Ahmad ABU-JWEFELL)  
+- 💼 LinkedIn: [linkedin.com/in/yourusername](https://linkedin.com/in/AhmadABU-JWEFELL)  
 - 🌐 Portfolio: [your-portfolio.com](https://your-portfolio.com)  
 - 💬 Telegram: [@yourusername](https://t.me/yourusername)
 
