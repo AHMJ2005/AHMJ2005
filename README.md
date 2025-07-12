@@ -51,7 +51,6 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
 </p>
 
 ---
-
 ## 💻 Tech Stack
 
 <p align="left">
@@ -66,8 +65,11 @@ I once managed an event called _"Atypical Robbing Balloons"_, which was an aweso
   <img src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=white" />
   <img src="https://img.shields.io/badge/Adobe%20After%20Effects-9999FF?style=for-the-badge&logo=adobe%20after%20effects&logoColor=white" />
   <img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white" />
-  <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-FF6F61?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/Automation-0ABDE3?style=for-the-badge&logo=zapier&logoColor=white" />
+  <img src="https://img.shields.io/badge/Chatbot-008080?style=for-the-badge&logo=botframework&logoColor=white" />
 </p>
+
 
 ---
 
