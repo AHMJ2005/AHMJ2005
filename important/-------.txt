@@ -1,0 +1,128 @@
+Great! Let’s break down the **Unix/Linux file permissions** system in full, so you understand what the `-`, `r`, `w`, and `x` mean — **what they do**, and **when to use them**.
+
+---
+
+## 🧱 File Permission Structure
+
+In Linux, file permissions are displayed like this:
+
+```bash
+-rwxr-xr--
+```
+
+It has **10 characters**:
+
+```
+[1] [2-4][5-7][8-10]
+ ^    ^     ^     ^
+ |    |     |     └─ Others (everyone else)
+ |    |     └────── Group (your group)
+ |    └──────────── User (owner of file)
+ └───────────────── File type
+```
+
+---
+
+## 🔢 \[1] File Type
+
+The first character tells you **what kind of file it is**:
+
+| Character | Meaning           |
+| --------- | ----------------- |
+| `-`       | Regular file      |
+| `d`       | Directory         |
+| `l`       | Symbolic link     |
+| `c`       | Character device  |
+| `b`       | Block device      |
+| `s`       | Socket            |
+| `p`       | Named pipe (FIFO) |
+
+---
+
+## 🔤 \[2-10] Permissions (`r`, `w`, `x`)
+
+Each of the next 9 characters comes in **3 groups** of 3:
+
+| Section | Represents | Example (`rwx`) | Meaning           |
+| ------- | ---------- | --------------- | ----------------- |
+| 2–4     | **User**   | `rwx`           | Owner permissions |
+| 5–7     | **Group**  | `r-x`           | Group permissions |
+| 8–10    | **Others** | `r--`           | Everyone else     |
+
+Each group can have these characters:
+
+| Char | Meaning                   | When to Use                                        |
+| ---- | ------------------------- | -------------------------------------------------- |
+| `r`  | **Read** (view/read file) | Needed to open/read files or list directories      |
+| `w`  | **Write** (modify file)   | Needed to edit or delete file contents             |
+| `x`  | **Execute** (run file)    | Needed to **run scripts** or **enter directories** |
+
+---
+
+## 🎯 When to Use `r`, `w`, and `x`
+
+### ✅ `r` (Read)
+
+* For **files**: lets the user **open and read** contents.
+* For **directories**: lets the user **see filenames** (but not contents).
+
+### ✅ `w` (Write)
+
+* For **files**: lets the user **edit or overwrite** file contents.
+* For **directories**: allows **creating, deleting, or renaming** files in the directory.
+
+> ⚠️ You need `x` on a directory **in addition** to `w` to fully work with it.
+
+### ✅ `x` (Execute)
+
+* For **files**: lets the user **run the file** (like a script or program).
+* For **directories**: allows the user to **enter (cd into)** the directory.
+
+---
+
+## 📁 Examples
+
+### `-rwxr-xr--`
+
+* Owner: read, write, execute → full control.
+* Group: read and execute → can view and run.
+* Others: read-only → can only see the file.
+
+### `-rw-r--r--`
+
+* Owner: read, write → can edit.
+* Group & Others: read-only → can view only.
+
+### `drwxr-x---`
+
+* A **directory**:
+
+  * Owner: full access.
+  * Group: read and enter.
+  * Others: no access.
+
+---
+
+## 🛠️ Changing Permissions (with `chmod`)
+
+```bash
+chmod u+x script.sh    # Add execute for user
+chmod g-w file.txt     # Remove write for group
+chmod o+r file.txt     # Add read for others
+chmod 755 file.sh      # rwxr-xr-x (common for scripts)
+```
+
+---
+
+## 🧠 Summary Table
+
+| Symbol | File             | Directory               |
+| ------ | ---------------- | ----------------------- |
+| `r`    | Can read file    | Can list directory      |
+| `w`    | Can modify file  | Can add/remove files    |
+| `x`    | Can execute file | Can `cd` into directory |
+
+---
+
+Let me know if you want examples for a specific use case (e.g., web server, shared folder, etc.).
+
