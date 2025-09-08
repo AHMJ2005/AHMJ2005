@@ -126,3 +126,150 @@ chmod 755 file.sh      # rwxr-xr-x (common for scripts)
 
 Let me know if you want examples for a specific use case (e.g., web server, shared folder, etc.).
 
+---------------------------------------------------------------------
+The string `-rw-r--r--` represents the **permissions** for a file or directory in a Unix-like operating system (such as Linux). Each character represents a specific permission, and the string is divided into three groups of **three characters** each.
+
+### Breakdown of `-rw-r--r--`
+
+```
+-rw-r--r--  
+  |  |  |  |  
+  |  |  |  └─── Group permissions
+  |  |  └─────── Other (world) permissions
+  |  └───────── User (owner) permissions
+  └──────────── Type of file
+```
+
+Here’s what each part means:
+
+---
+
+### 1. **File Type (`-`)**
+
+* The first character indicates the **type of file**.
+
+  * `-` means it's a **regular file**.
+  * `d` would indicate a **directory**.
+  * `l` would indicate a **symbolic link**, and so on.
+
+---
+
+### 2. **User (Owner) Permissions (`rw-`)**
+
+* The second to fourth characters represent the **permissions for the file owner (user)**.
+
+  * `r` = **read** permission (the user can read the file).
+  * `w` = **write** permission (the user can modify the file).
+  * `-` = **no execute** permission (the user cannot run the file).
+
+In this case, the **owner** has **read** and **write** permissions (`rw-`).
+
+---
+
+### 3. **Group Permissions (`r--`)**
+
+* The fifth to seventh characters represent the **permissions for the group** that owns the file.
+
+  * `r` = **read** permission (the group can read the file).
+  * `-` = **no write** permission (the group cannot modify the file).
+  * `-` = **no execute** permission (the group cannot run the file).
+
+In this case, the **group** has only **read** permission (`r--`).
+
+---
+
+### 4. **Other (World) Permissions (`r--`)**
+
+* The eighth to tenth characters represent the **permissions for everyone else (others)**.
+
+  * `r` = **read** permission (everyone can read the file).
+  * `-` = **no write** permission (everyone cannot modify the file).
+  * `-` = **no execute** permission (everyone cannot run the file).
+
+In this case, **others** have **read** permission (`r--`).
+
+---
+
+### Summary of `-rw-r--r--`
+
+* **File Type**: `-` → Regular file
+* **Owner (User) Permissions**: `rw-` → Read and write permissions for the owner
+* **Group Permissions**: `r--` → Read-only permissions for the group
+* **Other (World) Permissions**: `r--` → Read-only permissions for others
+
+---
+
+### How to Change Permissions?
+
+To modify these permissions, you can use the `chmod` (change mode) command. For example:
+
+* To **add write permission** for others:
+
+  ```bash
+  chmod o+w <file>
+  ```
+
+* To **remove write permission** for the group:
+
+  ```bash
+  chmod g-w <file>
+  ```
+
+Let me know if you'd like more details on how to manage file permissions!
+
+---------------------------------------------------------------------
+
+To replace **`-rw-`** (which means **read and write** permissions for the owner) with **`-r--`** (which means **read-only** permission for the owner), you need to **remove the write permission** for the file's owner.
+
+### To Remove Write Permission for the Owner (`-rw-` → `-r--`):
+
+You can use the `chmod` command to remove write permissions for the **owner** of the file.
+
+Here’s the command to do that:
+
+```bash
+chmod u-w <filename>
+```
+
+### Explanation:
+
+* `chmod`: The command to change file permissions.
+* `u`: Refers to the **user** (file owner).
+* `-w`: Removes **write** permission.
+* `<filename>`: Replace this with the actual name of your file.
+
+---
+
+### Example:
+
+If you have a file named `testshell00` and you want to change its permissions from `-rw-r--r--` to `-r--r--r--` (making it **read-only** for the owner), run:
+
+```bash
+chmod u-w testshell00
+```
+
+After running this command, the file's permissions will change to:
+
+```
+-r--r--r--  
+```
+
+### Confirming the Change:
+
+You can verify the change using `ls -l`:
+
+```bash
+ls -l testshell00
+```
+
+It should now show the updated permissions:
+
+```
+-r--r--r-- 1 liveuser liveuser 0 Sep  8 16:42 testshell00
+```
+
+This confirms that the owner only has **read** permission (`r--`), and **write** permission has been removed.
+
+---
+
+Let me know if you need further assistance!
