@@ -1,6 +1,6 @@
 NAME = rush-02
 
-SRCS = main.c dict.c convert.c utils.c
+SRCS = rush-02.c dict.c convert.c utils.c
 
 OBJS = $(SRCS:.c=.o)
 

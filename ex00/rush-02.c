@@ -1,57 +1,30 @@
-#include <unistd.h>
 #include <stdlib.h>
+int ft_strlen(const char *s);
+void ft_putstr(const char *s);
+int ft_is_number(char *s);
 
-typedef struct s_dict
-{
-    unsigned long long number;
-    char *word;
-    struct s_dict *next;
-} t_dict;
-
-t_dict *load_dict(char *filename);
-void free_dict(t_dict *dict);
-void convert_number(t_dict *dict, unsigned long long n);
-int is_valid_number(char *str);
-unsigned long long ft_atoi(char *str);
+void number_to_words(int n);
 
 int main(int argc, char **argv)
 {
-    t_dict *dict;
-    char *number_str;
+    int num;
 
-    if (argc < 2 || argc > 3)
+    if (argc != 2)
     {
-        write(1, "Error\n", 6);
-        return 1;
+        ft_putstr("Error\n");
+        return (1);
     }
-
-    if (argc == 2)
+    if (!ft_is_number(argv[1]))
     {
-        dict = load_dict("numbers.dict");
-        number_str = argv[1];
+        ft_putstr("Error\n");
+        return (1);
     }
-    else
+    num = atoi(argv[1]);
+    if (num < 0)
     {
-        dict = load_dict(argv[1]);
-        number_str = argv[2];
+        ft_putstr("Error\n");
+        return (1);
     }
-
-    if (!dict)
-    {
-        write(1, "Dict Error\n", 11);
-        return 1;
-    }
-
-    if (!is_valid_number(number_str))
-    {
-        write(1, "Error\n", 6);
-        free_dict(dict);
-        return 1;
-    }
-
-    unsigned long long num = ft_atoi(number_str);
-    convert_number(dict, num);
-
-    free_dict(dict);
-    return 0;
+    number_to_words(num);
+    return (0);
 }
