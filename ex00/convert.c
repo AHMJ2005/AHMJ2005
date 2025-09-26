@@ -45,7 +45,49 @@ void number_to_words(int n)
             number_to_words(n % 1000);
         }
     }
-    else
-        ft_putstr("too big");
-    write(1, "\n", 1);
-}
+    else if (n < 1000000000)
+    {
+        number_to_words(n / 1000000);
+        write(1, " milion", 6);
+        if (n % 1000000)
+        {
+            write(1, " ", 1);
+            number_to_words(n % 1000000);
+        }
+    }
+    else if (n < 1000000000000)
+    {
+        number_to_words(n / 1000000000000);
+        write(1, " billion", 6);
+        if (n % 1000000000000)
+        {
+            write(1, " ", 1);
+            number_to_words(n % 1000000000000);
+        }
+    }
+    else if (n < 1000000000000000)
+    {
+        number_to_words(n / 1000000000000000);
+        write(1, " trillion", 8);
+        if (n % 1000000000000000)
+        {
+            write(1, " ", 1);
+            number_to_words(n % 1000000000000000);
+
+        }
+    }
+    else if (n < 1000000000000000000)
+    {
+        number_to_words(n / 1000000000000000000);
+        write(1, " billion", 6);
+        if (n % 1000000000000000000)
+        {
+            write(1, " quadrillion", 1);
+            number_to_words(n % 1000000000000000000);
+        }
+    }else if ()
+    {
+        
+    }
+        write(1, "\n", 1);
+    }
