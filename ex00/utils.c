@@ -1,82 +1,30 @@
 #include <unistd.h>
-#include <stdlib.h>
+#include <stddef.h>
 
-typedef struct s_dict
+int ft_strlen(const char *s)
 {
-    unsigned long long number;
-    char *word;
-    struct s_dict *next;
-} t_dict;
-
-t_dict *load_dict(char *filename);
-void free_dict(t_dict *dict);
-char *find_in_dict(t_dict *dict, unsigned long long n);
-void convert_number(t_dict *dict, unsigned long long n);
-int is_valid_number(char *str);
-unsigned long long ft_atoi(char *str);
-void ft_putstr(char *str);
-
-int ft_strlen(char *str)
-{
-    int len = 0;
-    while (str[len])
-        len++;
-    return len;
+    size_t i = 0;
+    while (s && s[i])
+        i++;
+    return (i);
 }
 
-void ft_putstr(char *str)
+void ft_putstr(const char *s)
 {
-    int len = ft_strlen(str);
+    if (s)
+        write(1, s, ft_strlen(s));
+}
+
+int ft_is_number(char *s)
+{
     int i = 0;
-    while (i < len)
+    if (!s || !s[0])
+        return (0);
+    while (s[i])
     {
-        write(1, &str[i], 1);
+        if (s[i] < '0' || s[i] > '9')
+            return (0);
         i++;
     }
-}
-
-int is_space(char c)
-{
-    return (c == ' ' || c == '\t' || c == '\n' ||
-            c == '\r' || c == '\f' || c == '\v');
-}
-
-int is_digit(char c)
-{
-    return (c >= '0' && c <= '9');
-}
-
-unsigned long long ft_atoi(char *str)
-{
-    unsigned long long result = 0;
-    int i = 0;
-
-    while (is_space(str[i]))
-        i++;
-
-    while (is_digit(str[i]))
-    {
-        result = result * 10 + (str[i] - '0');
-        i++;
-    }
-
-    return result;
-}
-
-char *ft_strdup(char *str)
-{
-    int len = ft_strlen(str);
-    char *new_str = malloc(len + 1);
-    int i = 0;
-
-    if (!new_str)
-        return NULL;
-
-    while (i < len)
-    {
-        new_str[i] = str[i];
-        i++;
-    }
-    new_str[i] = '\0';
-    return new_str;
+    return (1);
 }
