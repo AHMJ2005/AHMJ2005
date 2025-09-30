@@ -13,7 +13,7 @@ char    *ft_strcpy(char *s1, char *s2)
 int main ()
 {
 	char s2[] = "ahmad ";
-	char *s1;
+	char s1[] = "";
 	ft_strcpy(s1 , s2);
-	printf("%s" , s1 );
+	printf("%s" , s1);
 }
