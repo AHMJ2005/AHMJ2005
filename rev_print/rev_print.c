@@ -10,6 +10,7 @@ char *ft_rev_print(char *str)
     a = (char *)malloc(sizeof(char) * i );
     int j = 0 ;
     int size = i;
+    i--;
     while ( j < size  ){
         a[j] = str[i]; 
         i--;
