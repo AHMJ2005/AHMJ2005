@@ -18,9 +18,7 @@ int	len_w(char *str)
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -30,11 +28,11 @@ char	*ft_strdup(char *src)
 	int		len;
 	int		i;
 
-	i = 0;
 	len = len_w(src);
-	new = malloc(len);
+	new = malloc(len + 1);
 	if (new == NULL)
 		return (0);
+	i = 0;
 	while (i < len)
 	{
 		new[i] = src[i];
