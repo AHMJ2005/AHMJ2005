@@ -21,7 +21,10 @@ int	*ft_range(int min, int max)
 
 	len = (max - min) - 1;
 	if (min >= max)
-		*new = NULL;
+	{
+		*range = NULL;
+		return (0);
+	}
 	new = malloc(len);
 	i = 0;
 	size = min;
