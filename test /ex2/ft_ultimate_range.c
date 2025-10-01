@@ -9,28 +9,54 @@
 /*   Updated: 2025/09/29 10:50:05 by aabujwei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdlib.h>
+#include <stdio.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
+int ft_ultimate_range(int **range, int min, int max)
 {
-	int	*arr;
-	int	i;
+	int *arr;
+	int i;
 
-	i = 0;
 	if (min >= max)
 	{
 		*range = NULL;
 		return (0);
 	}
 	arr = malloc(sizeof(int) * (max - min));
-	if (arr == 0)
+	if (!arr)
 		return (-1);
 	*range = arr;
-	while (i < max)
+	i = 0;
+	while (i < max - min)
 	{
-		*range[i] = i;
+		arr[i] = min + i;
 		i++;
 	}
-	return (i);
+	return (max - min);
+}
+
+int main(void)
+{
+	int i;
+	int *tab;
+	int min;
+	int max;
+	int s;
+
+	min = 0;
+	max = 5;
+	s = ft_ultimate_range(&tab, min, max);
+	printf("size = %d\n", s);
+	if (tab != NULL)
+	{
+		i = 0;
+		while (i < s)
+		{
+			printf("%d\n", tab[i]);
+			i++;
+		}
+	}
+	else
+		printf("NULL\n");
+	return (0);
 }
