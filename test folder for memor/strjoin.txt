@@ -1,0 +1,10 @@
+int main()
+{
+	char **str;
+	char a[] = ", ";
+	str[0] = "aaa";
+	str[1] = "www";
+	str[2] = "qqq";
+	ft_strjoin(3 , str, a);
+return 0;
+}

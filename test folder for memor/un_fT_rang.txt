@@ -1,0 +1,23 @@
+int	main(void)
+{
+	int	i;
+	int	*tab;
+	int	min;
+	int	max;
+	int	size;
+
+	min = 0;
+	max = 5;
+	size = ft_ultimate_range(&tab, min, max);
+	printf("size = %d\n", size);
+	if (tab != NULL)
+	{
+		i = 0;
+		while (i < size)
+		{
+			printf("%d\n", tab[i]);
+			i++;
+		}
+	}
+	return (0);
+}

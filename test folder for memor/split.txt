@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char	**ft_split(char *str, char *charset);
+
+int	main(void)
+{
+	char	*str = "Hello,,World!42!42Tech";
+	char	*charset = ",!";
+	char	**result;
+	int		i;
+	result = ft_split(str, charset);
+	i = 0;
+	while (result[i])
+	{
+		printf("Word %d: %s\n", i, result[i]);
+		i++;
+	}
+
+	return (0);
+}
