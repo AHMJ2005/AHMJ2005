@@ -31,7 +31,7 @@ int	the_size_of_arrayex(char *str)
 	return (i);
 }
 
-static int	total_size(int size, char **strs, char *sep)
+int	total_size(int size, char **strs, char *sep)
 {
 	int	i;
 	int	len;
