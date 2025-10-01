@@ -31,7 +31,7 @@ int	the_size_of_arrayex(char *str)
 	return (i);
 }
 
-int	total_size(int size, char **strs, char *sep)
+static int	total_size(int size, char **strs, char *sep)
 {
 	int	i;
 	int	len;
@@ -46,10 +46,23 @@ int	total_size(int size, char **strs, char *sep)
 	return (len + (size - 1) * len_sep(sep));
 }
 
+static int	copy_str(char *dst, char *src, int k)
+{
+	int	j;
+
+	j = 0;
+	while (src[j])
+	{
+		dst[k] = src[j];
+		j++;
+		k++;
+	}
+	return (k);
+}
+
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		i;
-	int		j;
 	int		k;
 	char	*p;
 
@@ -68,20 +81,9 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	k = 0;
 	while (i < size)
 	{
-		j = 0;
-		while (strs[i][j])
-		{
-			p[k] = strs[i][j];
-			j++;
-			k++;
-		}
-		j = 0;
-		while (i < size - 1 && sep[j])
-		{
-			p[k] = sep[j];
-			j++;
-			k++;
-		}
+		k = copy_str(p, strs[i], k);
+		if (i < size - 1)
+			k = copy_str(p, sep, k);
 		i++;
 	}
 	p[k] = '\0';
