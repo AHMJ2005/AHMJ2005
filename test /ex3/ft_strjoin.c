@@ -10,57 +10,84 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-#include <stdio.h>
-int len_sep(char *sep)
+
+int	len_sep(char *sep)
 {
 	int	i;
 
 	i = 0;
-	while (sep[i] != '\0')
-	{
+	while (sep[i])
 		i++;
-	}
 	return (i);
 }
 
-int the_size_of_arrayex(char *str)
+int	the_size_of_arrayex(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
+	while (str[i])
 		i++;
-	}
 	return (i);
 }
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	int	word;
-	int	i;
-	char	*p;
-	int	TSOAX;
-	int	sizee;
 
-	TSOAX = 0;
-	word = size;
+int	total_size(int size, char **strs, char *sep)
+{
+	int	i;
+	int	len;
+
+	len = 0;
 	i = 0;
-	sizee = 0;
-	//printf("%d" , sizee);
-	if (size == 0)
-	{
-		*p = '\0';
-		return (p);
-	}
 	while (i < size)
 	{
-		printf("%c\n" , strs[i][0]);
-		TSOAX += the_size_of_arrayex(strs[i]);
+		len += the_size_of_arrayex(strs[i]);
 		i++;
 	}
-	sizee = (((size - 1) * (len_sep(sep))) + TSOAX);
-	printf("%d" , sizee);
+	return (len + (size - 1) * len_sep(sep));
 }
+
+char	*ft_strjoin(int size, char **strs, char *sep)
+{
+	int		i;
+	int		j;
+	int		k;
+	char	*p;
+
+	if (size == 0)
+	{
+		p = malloc(1);
+		if (!p)
+			return (NULL);
+		p[0] = '\0';
+		return (p);
+	}
+	p = malloc(total_size(size, strs, sep) + 1);
+	if (!p)
+		return (NULL);
+	i = 0;
+	k = 0;
+	while (i < size)
+	{
+		j = 0;
+		while (strs[i][j])
+		{
+			p[k] = strs[i][j];
+			j++;
+			k++;
+		}
+		j = 0;
+		while (i < size - 1 && sep[j])
+		{
+			p[k] = sep[j];
+			j++;
+			k++;
+		}
+		i++;
+	}
+	p[k] = '\0';
+	return (p);
+}
+
 int main()
 {
 	char **str;
